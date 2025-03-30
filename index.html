@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade de Aveiro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">universidade de aveiro</div>
+        <nav>
+            <ul>
+                <li><a href="#">SOBRE A UA</a></li>
+                <li class="dropdown">
+                    <a href="#">ESTUDAR</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Tu pertences aqui</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Candidaturas</a></li>
+                        <li><a href="#">Apoio ao ensino</a></li>
+                        <li><a href="#">Apoio ao estudo</a></li>
+                        <li><a href="#">Estágios e emprego</a></li>
+                        <li><a href="#">Departamentos e escolas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">VIVER</a></li>
+                <li><a href="#">INVESTIGAR</a></li>
+                <li><a href="#">COOPERAR</a></li>
+                <li><a href="#">INTERNACIONAL</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Mestrado do NeRD</h1>
+        <h2>Ano 1</h2>
+        <section>
+            <h3>1º Semestre</h3>
+            <ul>
+                <li>Introdução ao Sticker - 6 ECTS</li>
+                <li>Obtenção de Materiais Elétricos - 6 ECTS</li>
+                <li>Programação Orientada a Interruptions de Happy Hour - 6 ECTS</li>
+                <li>Introdução a Máquinas de Venda - 6 ECTS</li>
+                <li>Alimentação e Socialização I - 6 ECTS</li>
+            </ul>
+        </section>
+        <section>
+            <h3>2º Semestre</h3>
+            <ul>
+                <li>Introdução ao Sono Estratégico - 6 ECTS</li>
+                <li>Alimentação e Socialização II - 6 ECTS</li>
+                <li>Fabrico de Stickers - 6 ECTS</li>
+                <li>Edging - 6 ECTS</li>
+                <li>Calculo Aplicado ao CUA - 6 ECTS</li>
+            </ul>
+        </section>
+        <h2>Ano 2</h2>
+        <section>
+            <h3>1º Semestre</h3>
+            <ul>
+                <li>Laboratório de EletroEstouro - 6 ECTS</li>
+                <li>Aprofundamento ao Sono Profundo - 6 ECTS</li>
+            </ul>
+        </section>
+        <section>
+            <h3>2º Semestre</h3>
+            <ul>
+                <li>Análise e Processamento de Yapping Franciscano - 6 ECTS</li>
+                <li>Laboratório de Auxilio a Sem-Abrigos - 6 ECTS</li>
+            </ul>
+        </section>
+    </main>
+    
+    <script>
+        document.querySelectorAll('.dropdown').forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.stopPropagation();
+                document.querySelectorAll('.dropdown').forEach(drop => {
+                    if (drop !== item) {
+                        drop.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown').forEach(drop => {
+                drop.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
