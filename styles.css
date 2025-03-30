@@ -79,3 +79,20 @@ ul {
 ul li {
     padding: 5px 0;
 }
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px; /* Espaço entre o texto e a imagem */
+}
+
+.text-content {
+    flex: 1; /* Ocupa o espaço disponível */
+}
+.image-container img {
+    width: 300px; /* Define o tamanho da imagem */
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+}
